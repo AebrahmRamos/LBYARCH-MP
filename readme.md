@@ -18,7 +18,7 @@ Before running this project, ensure you have the following installed on your sys
 - `asm_rgb.asm`: The assembly file that contains the function to convert the RGB image to grayscale.
 
 ## Usage
-2 Ways to run the program, either by manually executing the commands below or if on an x86_64 Windows just run 'run.bat'. If you're using VS Code terminal to run the executable or batch file, run it like `.\c_rgb.exe' '.\run.bat'.
+2 Ways to run the program, either by manually executing the commands below or if on an x86_64 Windows just run 'run.bat'. If you're using VS Code terminal to run the executable or batch file, run it like `.\c_rgb.exe` `.\run.bat`.
 
 ### Option 1
 1. **Compile the assembly file**:
