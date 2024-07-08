@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <stdint.h>
 
-// Function prototype for the assembly function
 extern void cvtRGBToGray(uint8_t *img2, uint8_t *img1, int m, int n);
 
-int main() {
+int main() 
+{
     int m = 3; // width
     int n = 3; // height
     uint8_t img1[3][3][3] = {
@@ -15,32 +15,31 @@ int main() {
     };
     uint8_t img2[3][3] = {0}; // leave this '0' pls
 
-    // Print the original image for debugging purposes
+    // Print: Original Image <-- Debugger lang, to make sure the program runs hehe
     printf("Original Image:\n");
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < m; ++j) {
+    for (int i = 0; i < n; ++i) 
+    {
+        for (int j = 0; j < m; ++j) 
+        {
             printf("(%d, %d, %d) ", img1[i][j][0], img1[i][j][1], img1[i][j][2]);
         }
         printf("\n");
     }
 
-    // Call the assembly function
     cvtRGBToGray(&img2[0][0], &img1[0][0][0], m, n);
     
-    // Debug print: Check if the function call returned
+    // Print: Check if the function call returned <-- Also to debug, to make sure the program is/was called hehe
     printf("Assembly function called\n");
 
-(R + G + B) / 3    // Print the grayscale image
+    // Print: Grayscale image = (R + G + B) / 3
     printf("Grayscale Image:\n");
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < m; ++j) {
+    for (int i = 0; i < n; ++i) 
+    {
+        for (int j = 0; j < m; ++j) 
+        {
             printf("%d ", img2[i][j]);
         }
         printf("\n");
     }
-
-    // Debug print: Check if the program reaches this point
-    printf("Program finished\n");
-
     return 0;
 }
